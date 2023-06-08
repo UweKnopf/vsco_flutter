@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/Feed.dart';
+import 'pages/feed.dart';
 
 void main() {
   runApp(const MyApp());
