@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vsco_flutter/components/appBar.dart';
+import 'package:vsco_flutter/components/card.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({Key? key}) : super(key: key);
@@ -17,6 +18,9 @@ class _FeedPageState extends State<FeedPage> {
       backgroundColor: Colors.grey[100],
       body: Column(children: [
         AppBarVSCO(svgLogo: svgLogo),
+        PicCard(
+            picture: AssetImage('/images/vsco_052823.jpg'),
+            profilepicture: AssetImage('/images/vsco_052823.jpg'))
       ]),
     );
   }

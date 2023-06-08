@@ -31,7 +31,7 @@ class AppBarVSCO extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.resolveWith<Color>(
                         (Set<MaterialState> states) {
                       if (states.contains(MaterialState.hovered)) {
-                        return Color.fromARGB(255, 165, 165, 165);
+                        return const Color.fromARGB(255, 165, 165, 165);
                       }
                       return Colors.black;
                     }),
