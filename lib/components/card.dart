@@ -26,7 +26,10 @@ class _PicCardState extends State<PicCard> {
 
       child: Column(
         children: [
-          Image.asset('/images/vsco_052823.jpg'),
+          InkWell(
+            onTap: () {},
+            child: Image.asset('/images/vsco_052823.jpg'),
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -111,7 +114,10 @@ class PicCardOnlyName extends StatelessWidget {
 
       child: Column(
         children: [
-          Image.asset('/images/vsco_052823.jpg'),
+          InkWell(
+            onTap: () {},
+            child: Image.asset('/images/vsco_052823.jpg'),
+          ),
           const SizedBox(
             height: 10,
           ),
