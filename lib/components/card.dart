@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class PicCard extends StatefulWidget {
@@ -29,7 +27,7 @@ class _PicCardState extends State<PicCard> {
       child: Column(
         children: [
           Image.asset('/images/vsco_052823.jpg'),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -37,11 +35,11 @@ class _PicCardState extends State<PicCard> {
             children: [
               Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 10,
                     backgroundColor: Colors.black,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   TextButton(
@@ -82,7 +80,8 @@ class _PicCardState extends State<PicCard> {
                       },
                       icon: Icon(
                           reshareSelected ? Icons.repeat_on : Icons.repeat)),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.ios_share)),
+                  IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.ios_share)),
                 ],
               )
             ],
@@ -113,12 +112,12 @@ class PicCardOnlyName extends StatelessWidget {
       child: Column(
         children: [
           Image.asset('/images/vsco_052823.jpg'),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               TextButton(

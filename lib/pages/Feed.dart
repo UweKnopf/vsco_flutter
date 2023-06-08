@@ -18,7 +18,7 @@ class _FeedPageState extends State<FeedPage> {
       backgroundColor: Colors.grey[100],
       body: Column(children: [
         AppBarVSCO(svgLogo: svgLogo),
-        Row(
+        const Row(
           children: [
             PicCard(),
             PicCardOnlyName(),
