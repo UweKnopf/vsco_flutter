@@ -18,9 +18,12 @@ class _FeedPageState extends State<FeedPage> {
       backgroundColor: Colors.grey[100],
       body: Column(children: [
         AppBarVSCO(svgLogo: svgLogo),
-        PicCard(
-            picture: AssetImage('/images/vsco_052823.jpg'),
-            profilepicture: AssetImage('/images/vsco_052823.jpg'))
+        Row(
+          children: [
+            PicCard(),
+            PicCardOnlyName(),
+          ],
+        ),
       ]),
     );
   }
