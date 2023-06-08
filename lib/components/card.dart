@@ -2,17 +2,24 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class PicCard extends StatelessWidget {
+class PicCard extends StatefulWidget {
   const PicCard({
     super.key,
     //this.cardType = 'FeedMobile', //FeedMobile,
     //required this.picture,
     //this.profilepicture,
   });
-  //final String cardType;
-  //final AssetImage picture;
-  //final AssetImage profilepicture;
 
+  @override
+  State<PicCard> createState() => _PicCardState();
+}
+
+class _PicCardState extends State<PicCard> {
+  bool favSelected = false;
+  bool reshareSelected = false;
+  bool standardSelected = false;
+
+  //final String cardType;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -56,8 +63,25 @@ class PicCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.star_border)),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.repeat)),
+                  IconButton(
+                    isSelected: favSelected,
+                    icon: Icon(favSelected ? Icons.star : Icons.star_border),
+                    //selectedIcon: const Icon(Icons.star_border_outlined),
+                    onPressed: () {
+                      setState(() {
+                        favSelected = !favSelected;
+                      });
+                    },
+                  ),
+                  IconButton(
+                      isSelected: reshareSelected,
+                      onPressed: () {
+                        setState(() {
+                          reshareSelected = !reshareSelected;
+                        });
+                      },
+                      icon: Icon(
+                          reshareSelected ? Icons.repeat_on : Icons.repeat)),
                   IconButton(onPressed: () {}, icon: Icon(Icons.ios_share)),
                 ],
               )
