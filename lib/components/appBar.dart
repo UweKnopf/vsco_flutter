@@ -19,14 +19,13 @@ class _AppBarVSCOState extends State<AppBarVSCO> {
   refresh() {
     setState(() {
       logedIn = !logedIn;
-      print('$logedIn');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return logedIn
-        ? AppBarSignedIn()
+        ? const AppBarSignedIn()
         : AppBarSignedOut(
             notifyParent: refresh,
           );
@@ -138,7 +137,7 @@ class _AppBarSignedOutState extends State<AppBarSignedOut> {
               ),
               TextButton(
                 onPressed: () {
-                  widget.notifyParent;
+                  widget.notifyParent();
                 },
                 style: ButtonStyle(
                   overlayColor: MaterialStateProperty.all(Colors.transparent),
